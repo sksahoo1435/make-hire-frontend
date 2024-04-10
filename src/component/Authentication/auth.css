@@ -1,0 +1,157 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    background-image: url('../../assets/background.avif'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.form-container {
+    background: linear-gradient(to right, rgb(255, 159, 175), rgb(48, 48, 100));
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 14px rgb(15 10 237 / 65%);
+    max-width: 500px;
+    overflow-y: auto;
+    max-height: 60vh;
+    animation: slideInFromTop 1s ease forwards;
+    opacity: 0;
+}
+
+.form-container::-webkit-scrollbar{
+    display: none;
+}
+
+.form-container_header{
+    color: black !important;
+    margin-bottom: 5px !important;
+    font-family: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555555;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #5cb85c;
+}
+
+.work-area-options {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -10px;
+    margin-left: 10px;
+    position: relative;
+    justify-content: center;
+}
+
+.work-area-options label {
+    width: 45%;
+    margin-bottom: 5px;
+    gap: 10px;
+    position: relative;
+    display: flex;
+}
+
+.work-area-options label:nth-child(even){
+    width: 30%;
+}
+
+.work-area-options label:nth-child(odd){
+    width: 60%;
+}
+
+.work-area-options label input[type="checkbox"] {
+    float: left;
+}
+
+.form-container p span:hover {
+    text-decoration: underline;
+    color: #ff4fea !important;
+    cursor: pointer;
+}
+
+.sign-in-message {
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+
+.sign-in-message span {
+    color: white;
+    text-decoration: none;
+}
+
+.sign-in-message span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.custom-button {
+    width: 100%;
+    background-color: #d1b8e6db;
+    color: black; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid rgb(84, 118, 33);
+  }
+  
+  .custom-button:hover {
+    background-color: wheat;
+  }
+
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width:576px){
+    .form-container {
+        width: 320px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px){
+    .form-container {
+        width: 450px;
+    }
+}
